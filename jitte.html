@@ -2,11 +2,11 @@
 <html lang="pt-BR">
   <head>
     <style>
-      html,
       body {
         margin: 0;
-        font-family: arial, sans-serif;
-        height: 100%;
+        font-family: sans-serif, arial;
+        min-height: 100%;
+        box-sizing: border-box;
         background-color: rgb(230, 228, 215);
       }
       ul {
@@ -57,33 +57,23 @@
       .dropdown:hover .dropdown-content {
         display: block;
       }
+      .icon {
+        display: none;
+      }
       main {
-        margin: 0px 20px;
-        height: 100%;
-      }
-      .page-container {
-        position: relative;
-        min-height: 100%;
-      }
-      .content-wrap {
-        padding-bottom: 66px;
-      }
-      .container {
-        padding-bottom: 60px;
+        margin: 2px 20px 3px;
       }
       img {
-        opacity: 0.5;
-      }
-      img:hover {
-        opacity: 1;
-      }
-      .boximg {
         box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.2);
         width: 30%;
         height: 100%;
         float: left;
         margin-right: 18px;
         margin-bottom: 4px;
+        opacity: 0.5;
+      }
+      img:hover {
+        opacity: 1;
       }
       p {
         font-size: 1.3em;
@@ -95,13 +85,26 @@
         text-align: center;
       }
       footer {
-        position: absolute;
+        position: relative;
         bottom: 0;
+        left: 0;
+        right: 0;
         background: #111;
         width: 100%;
+        color: #fff;
+        clear: both;
+        height: auto;
+        margin-top: 130px;
+      }
+      .footer-content {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        padding-top: 12px;
       }
       .footer-content p {
-        text-align: center;
+        margin: 10px auto;
+        line-height: 28px;
         color: #cacdd2;
       }
       @media screen and (max-width: 1100px) {
@@ -113,9 +116,13 @@
           margin-right: auto;
         }
       }
+      @media screen and (max-width: 900px) {
+        .dropdown-content a {
+        }
+      }
     </style>
     <meta charset="UTF-8" />
-    <title>Armas Brancas</title>
+    <title>Jitte - Arma Japonesa</title>
   </head>
   <body>
     <nav>
@@ -135,36 +142,30 @@
         <li><a href="formulary.html">Formulário</a></li>
       </ul>
     </nav>
-    <div class="page-container">
-      <main>
-        <div class="page-wrap container">
-          <h1>Armas Brancas</h1>
-          <img src="./assets/armas.png" alt="armas brancas" class="boximg" />
-          <p>
-            Designa-se <strong>arma branca</strong> um objeto que possa ser
-            utilizado agressivamente, para defesa ou ataque, mas cuja utilização
-            normal é outra, geralmente para trabalho. Machados, facas e martelos
-            são armas brancas; já outras armas como pistolas e rifles, por
-            exemplo, não se incluem nessa categoria, pois são armas de fogo e a
-            sua finalidade primária é ferir um oponente.
-          </p>
-          <p>
-            Noutra definição, arma branca é todo objeto criado para ferir
-            alguém. Independentemente de levar a morte ou não. Ex: espada; soco
-            inglês; chuço; punhal; nunchaku; etc. Nesta definição, objetos como
-            faca, facão, foice, tesoura, etc., não são armas brancas em virtude
-            de seu fim não ser ferir a alguém, mas funções diversas, como cortar
-            carnes, legumes, madeira, panos, etc. Agora, se estes objetos forem
-            utilizados para ferir a alguém, serão chamados de "instrumentos
-            do/de crime".
-          </p>
-        </div>
-      </main>
-      <footer>
-        <div class="footer-content">
-          <p>Pedro Ramos de Souza</p>
-        </div>
-      </footer>
-    </div>
+    <main>
+      <h1>Jitte</h1>
+      <img src="./assets/jitte.png" alt="jitte" />
+      <p>
+        <strong>Jitte</strong> ou <strong>jutte</strong> (em japonês:
+        <em>十手</em>) é uma arma usada para a pratica da arte marcial japonesa
+        <em>jittejutsu</em>. A palavra <em>jutte</em> é formada pelos kanji, ju
+        (dez) e te (mão), ou seja, significa "dez mãos". Este nome faz
+        referência à força criada pela alavanca, capaz de desarmar ou quebrar as
+        espadas. Foi muito utilizada por policiais do Japão antigo, posto ser
+        uma arma versátil, que podia acertar o pescoço e a cabeça ao mesmo
+        tempo, mas seu uso primário era de ser uma espada defensiva que
+        possibilitava desarmar sem matar.<br />
+        Existem várias histórias sobre mestres do <em>jittejutsu</em> que
+        quebraram katanas ou desarmaram seus oponentes facilmente com a
+        <strong>jitte</strong>. Hoje em dia ainda existem diversos estilos de
+        <em>Jittejutsu</em>. Entre eles podemos destacar o <em>Ikkaku ryu</em>,
+        que é ensinado em conjunto com o <em>Shindo Muso Ryu Jojutsu</em>.
+      </p>
+    </main>
+    <footer>
+      <div class="footer-content">
+        <p>Pedro Ramos de Souza</p>
+      </div>
+    </footer>
   </body>
 </html>

@@ -1,42 +1,287 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
+    <style>
+      html,
+      body {
+        margin: 0;
+        font-family: sans-serif, arial;
+        background-color: rgb(230, 228, 215);
+        height: 100%;
+      }
+      main {
+        margin: 0px 20px;
+        height: 100%;
+      }
+      .page-container {
+        height: 100%;
+        margin-left: 284px; /*width = ul padding e width*/
+        padding-top: 2.2em;
+        position: relative;
+      }
+      .content-wrap {
+        padding-bottom: 76px;
+      }
+      ul {
+        height: 100%;
+        width: 280px;
+        margin: 0;
+        padding: 2px;
+        background-color: #333;
+        position: fixed;
+        overflow: hidden;
+        list-style-type: none;
+        display: block;
+        text-align: left;
+        float: left;
+      }
+      li a,
+      .dropbtn {
+        display: block;
+        color: #f1f1ec;
+        padding: 16px 16px;
+        text-decoration: none;
+        font-size: 1.2em;
+        font-weight: 700;
+      }
+      li a:hover {
+        background-color: #111;
+      }
+      h1 {
+        font-size: 2.2em;
+        text-align: center;
+      }
+      .page-header {
+        background-color: #333;
+        margin: 0;
+        color: #f1f1ec;
+        width: calc(100% - 240px);
+        display: inline-block;
+        position: absolute;
+        right: 0;
+      }
+      h2 {
+        font-size: 2em;
+        text-align: center;
+      }
+
+      .container {
+        overflow: auto;
+      }
+      .first-content {
+        margin-bottom: 130px;
+      }
+      .first-content img {
+        float: right;
+        margin: 45px 0 18px 14px;
+      }
+
+      .second-content img {
+        float: left;
+      }
+      img {
+        width: 350px;
+        height: auto;
+        opacity: 0.5;
+      }
+      img:hover {
+        opacity: 1;
+      }
+      p {
+        font-size: 1.3em;
+        text-align: justify;
+        color: #111111;
+        margin: 10px 10px 0 0;
+      }
+      footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background: #111;
+        padding: 10px 0;
+      }
+      .footer-content p {
+        text-align: center;
+        color: #cacdd2;
+      }
+      @media screen and (max-width: 1024px) {
+        .first-content img {
+          margin: 0;
+          display: block;
+          margin-right: auto;
+          margin-left: auto;
+          float: none;
+        }
+        .second-content img {
+          margin: 0;
+          display: block;
+          margin-right: auto;
+          margin-left: auto;
+          float: none;
+        }
+
+      }
+      .menu-icon {
+        width: 35px;
+        height: 5.6px;
+        background-color: #f1f1ec;
+        margin: 0;
+        padding: 0;
+        border-radius: 15px;
+        
+      }
+      .clear-fix-menu {
+        margin-bottom: 60px;
+      }
+      .menu-button {
+        cursor: pointer;
+        box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.6);
+        background-color: #333;
+        width: 54px;
+        height: 44px;
+        justify-content: center;
+        align-items: center;
+        display: grid;
+        margin-left: 18px;
+        margin-top: 8px;
+        z-index: 1;
+       }
+       .menu-button:hover {
+         background-color: #111;
+       }
+       .menu-responsive {
+         position: fixed;
+       }
+       .container.active ul {
+        display: none;
+       }
+       .container.active .page-container {
+         margin-left: 0;
+       }
+       .container.active .page-header {
+         width: 100%;
+       }
+       @media screen and (max-width: 768px) {
+         ul {
+           display: none;
+         }
+         .page-container {
+           margin-left: 0;
+         }
+         .page-header {
+           width: 100%;
+         }
+         .container.active .page-header {
+          width: calc(100% - 240px);
+         }
+         .container.active .page-container {
+          margin-left: 284px;
+         }
+         .container.active ul {
+           display: block;
+         }
+       }
+       @media screen and (max-width: 425) {
+         
+       }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js
+    "></script>
+    <script>
+      $(document).ready(function(){
+        $(".menu-button").click(function(){
+          $(".container").toggleClass("active");
+          });
+        });
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale =  1.0">
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Armas Chinesas</title>
+    <title>Armas Chinesas - Armas Brancas</title>
   </head>
   <body>
-    <div class="main">
+    <div class="container">
+    <header>
+      <h1 class="page-header">Armas Chinesas</h1>
+      <nav>
+      <div class="menu-button menu-responsive">
+        <div class="menu-icon"></div>
+        <div class="menu-icon"></div>
+        <div class="menu-icon"></div>
+      </div>
+      <ul>
+        <div class="clear-fix-menu"></div>        <li><a href="index.html">Página Inicial</a></li>
+        <li><a href="armachinesa.html">Chinesas</a></li>
+        <li><a href="armaromana.html">Romanas</a></li>
+        <li><a href="jitte.html">Jitte</a></li>
+        <li><a href="kusa.html">Kusarigama</a></li>
+        </li> <li><a href="tachi.html">Tachi</a>
+        <li><a href="gallery.html">Galeria</a></li>
+        <li><a href="formulary.html">Formulário</a></li>
+      </ul>
+      </nav>
+    </header>
+    <div class="page-container">
       <main>
-        <h1>Armas Chinesas</h1>
-        <img src="./assets/" alt="" class="arma" />
-        <h6>arma branca chinesa</h6>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint culpa
-          modi ullam dolore provident tempore praesentium obcaecati doloremque
-          blanditiis. Magnam quis unde eaque quos officia veniam, ad a
-          repellendus dolore!
-        </p>
-      </main>
-    </div>
-    <div class="aside-menu">
-      <img src="./assets/logo" alt="" class="logo" />
+        <div class="content-wrap">
+          <div class="container first-content">
+            <h2>Bang - Bastão Chinês</h2>
+            <hr />
+            <img
+              src="./assets/bang.png"
+              alt="bastão chinês bang"
+              class="bang"
+            />
+            <p>
+              O <strong>bang</strong> (pronuncia-se <em>bahng</em>) é
+              possivelmente a mais básica das armas chinesas antigas. Trata-se
+              de longo cassetete em forma de bastão feito de madeira ou aço. É
+              usado nas artes marciais chinesas e é uma arma letal nas mãos de
+              um especialista em seu uso.
+              <br />
 
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic a sed eius
-        vel, illo aspernatur sunt consequuntur maiores cumque voluptate officiis
-        reiciendis laboriosam. Amet eius, ipsam alias nostrum aliquid
-        exercitationem?
-      </p>
-    </div>
-    <div class="footer">
+              A dança de <em>Shen Yun</em> de nome <em>Wu Song</em> luta contra
+              um tigre foi inspirada num romance clássico, Os bandidos do
+              pântano, e é uma das histórias mais famosas na qual o bang é
+              usado. Infelizmente, o bastão de <em>Wu Song</em> se quebra e ele
+              fica desarmado frente ao feroz tigre. Mas não temam, pois
+              <em>Wu Song</em> matou o tigre com suas próprias mãos. <br />
+
+              Em Jornada para o Oeste, o Rei Macaco leva um bastão dourado que
+              anteriormente havia sido um enorme pilar usado para sustentar o
+              mar. No romance, esse bang pesava milhares de quilos e, ainda
+              assim, depois de encolhido, pôde ser guardado atrás da orelha do
+              Rei Macaco; ele podia se transformar em qualquer coisa que o Rei
+              Macaco quisesse.
+            </p>
+          </div>
+          <div class="container second-content">
+            <h2>Sansetsukon</h2>
+            <hr />
+            <img
+              src="./assets/bastaomadeira.png"
+              alt="Sansetsukon - bastão chinês"
+            />
+            <p>
+              <strong>Sansetsukon</strong> (em chinês:
+              <em><strong>sanjiegun</strong>, 三節棍 , sān jié gùn</em>), é um
+              bastão de três seções originário da China, que consiste de três
+              bastões de madeira ou metal conectados por anéis de metal,
+              correntes ou corda. Constituindo-se numa versão maior e mais
+              complicada do famoso nunchaku, os bastões podem ser girados para
+              ganhar impulso e desferir um golpe devastador, ou pode ter suas
+              articulações usadas para golpear por cima ou ao redor de um escudo
+              ou outro bloco defensivo.
+              <br />
+            </p>
+          </div>
+        </div>
+      </main>
       <footer>
-        <p>
-          <span>Aluno Pedro Ramos de Souza</span>
-          <span><a href="https://www.github.com"></a>Github</span>
-        </p>
+        <div class="footer-content" rule="footer">
+          <p>Pedro Ramos de Souza</p>
+        </div>
       </footer>
     </div>
+  </div>
   </body>
 </html>

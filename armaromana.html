@@ -1,32 +1,211 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif, arial;
+        height: 100%;
+        background-color: rgb(230, 228, 215);
+      }
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        background-color: #333;
+        overflow: hidden;
+      }
+      li a,
+      .dropbtn {
+        display: inline-block;
+        color: #f1f1ec;
+        text-align: center;
+        padding: 28px 30px;
+        text-decoration: none;
+        font-size: 1.4em;
+        font-weight: 700;
+      }
+      li a:hover {
+        background-color: #111;
+      }
+      li {
+        float: left;
+      }
+      .dropdown {
+        display: inline-block;
+      }
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: rgb(230, 228, 215);
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+      .dropdown-content a {
+        color: black;
+        padding: 18px 51px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+      }
+      .dropdown-content a:hover {
+        background-color: #333;
+        color: #f1f1ec;
+      }
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+      main {
+        margin: 0px 20px;
+        height: 100%;
+      }
+      .page-container {
+        margin: 0;
+        padding: 0;
+        position: relative;
+        height: 100%;
+      }
+      .content-wrap {
+        padding-bottom: 66px;
+      }
+      .container {
+        padding: 0px 16px;
+        box-sizing: border-box;
+      }
+      div h1 {
+        font-size: 2.2em;
+        text-align: center;
+      }
+      .content-left {
+        float: left;
+        width: 47%;
+        margin-right: 16px;
+      }
+      .content-right {
+        float: right;
+        width: 47%;
+      }
+      img {
+        width: 350px;
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        opacity: 0.5;
+      }
+      img:hover {
+        opacity: 1;
+      }
+      p {
+        font-size: 1.3em;
+        text-align: justify;
+        color: #111111;
+      }
+      @media screen and (max-width: 900px) {
+        .content-left {
+          float: none;
+          width: 95%;
+          display: block;
+        }
+        .content-right {
+          float: none;
+          width: 95%;
+          display: block;
+          margin-top: 120px;
+        }
+        img {
+          width: 350px;
+          height: 100%;
+          margin-left: auto;
+          margin-right: auto;
+          display: block;
+        }
+      }
+      footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background: #111;
+      }
+      .footer-content p {
+        text-align: center;
+        color: #cacdd2;
+      }
+    </style>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Armas Romanas</title>
+    <title>Armas Romanas -Armas Brancas</title>
   </head>
   <body>
-    <div class="header">
-      <header>
-        <img src="./assets/logo" alt="" class="logo" />
-        <nav>
-          <a href="#">Home</a>
-          <a href="#">Chinesas</a>
-          <a href="#">Romanas</a>
-          <a href="#">Aluno</a>
-        </nav>
-      </header>
-    </div>
-    <div class="main">
-      <main></main>
-    </div>
-    <div class="footer">
+    <nav>
+      <ul>
+        <li><a href="index.html">Página Inicial</a></li>
+        <li><a href="armachinesa.html">Chinesas</a></li>
+        <li><a href="armaromana.html">Romanas</a></li>
+        <li class="dropdown">
+          <a href="armajaponesa.html" class="dropbtn">Japonesas</a>
+          <div class="dropdown-content">
+            <a href="jitte.html">Jitte</a>
+            <a href="kusa.html">Kusarigama</a>
+            <a href="tachi.html">Tachi</a>
+          </div>
+        </li>
+        <li><a href="gallery.html">Galeria</a></li>
+        <li><a href="formulary.html">Formulário</a></li>
+      </ul>
+    </nav>
+    <div class="page-container">
+      <div class="content-wrap">
+        <div class="container content-left">
+          <h1>Púgio - Punhal Romano</h1>
+          <hr />
+          <p>
+            Um punhal romano para combates mais próximos, esse punhal
+            provavelmente era usado para propósitos mais ornamentados porque não
+            era ideal para uso geral. Ao longo dos anos, o
+            <strong>pugio</strong> evoluiu bastante, alguns deles apresentavam
+            uma lâmina em forma de folha ou uma pequena ponta triangular.
+            <br />
+
+            Comumente de bronze ou ferro, com o punho variadamente ornado ou
+            enriquecido, às vezes feito de madeira dura preta do terebinto
+            sírio. O nome grego e latino dessa arma denota a pequenez do
+            artefato e a maneira de segurá-lo na mão. Ele era uma das armas
+            utilizadas pelo gladiador reciário, soldados e cidadães romanos, por
+            ser pequena podia-se ser guardada e carregada com facilidade.
+          </p>
+          <img src="./assets/pugio.png" alt="Púgio punhal romano" />
+        </div>
+        <div class="container content-right">
+          <h1>Pilo - Lança Romana</h1>
+          <hr />
+          <p>
+            <strong>Pilo</strong> (em latim: <em>pillum; pl. pilla</em>) era uma
+            das armas padrão da legião romana. Era uma lança composta de uma
+            parte de ferro, mais fina e pontiaguda, e outra de madeira, maior e
+            mais pesada. Essas duas partes eram unidas de tal maneira que quando
+            o pilo atingisse seu alvo, a junção das duas partes entortaria, e
+            tornaria difícil para, por exemplo, um adversário arrancar a lança
+            se ela tivesse cravado no seu escudo ou para o inimigo tentar
+            reutilizá-la. <br />
+            Ele então seria obrigado a jogar seu escudo fora para ter maior
+            agilidade, e então o exército inimigo teria um soldado sem a devida
+            proteção. Existiram diversos tipos de pilo, sendo os mais comuns
+            aqueles onde o metal encaixava na madeira e outros onde rebites
+            prendiam o metal à haste. Pilos mais resistentes eram utilizados
+            como falanges no lugar se serem lançadas. Esta arma sofreu
+            consideráveis alterações ao longo do extenso período em que foi
+            utilizada.
+          </p>
+          <img src="./assets/pilo.png" alt="pilo lança romana" />
+        </div>
+      </div>
       <footer>
-        <p>
-          <span>Aluno Pedro Ramos de Souza</span>
-          <span><a href="https://www.github.com"></a>Github</span>
-        </p>
+        <div class="footer-content">
+          <p>Pedro Ramos de Souza</p>
+        </div>
       </footer>
     </div>
   </body>

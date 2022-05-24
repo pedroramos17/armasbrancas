@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <style>
+      html,
+      body {
+        margin: 0;
+        font-family: arial, sans-serif;
+        height: 100%;
+        background-color: rgb(230, 228, 215);
+      }
+      * {
+        box-sizing: border-box;
+      }
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        background-color: #333;
+        overflow: hidden;
+      }
+      li a,
+      .dropbtn {
+        display: inline-block;
+        color: #f1f1ec;
+        text-align: center;
+        padding: 28px 30px;
+        text-decoration: none;
+        font-size: 1.4em;
+        font-weight: 700;
+      }
+      li a:hover {
+        background-color: #111;
+      }
+      li {
+        float: left;
+      }
+      .dropdown {
+        display: inline-block;
+      }
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: rgb(230, 228, 215);
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+      .dropdown-content a {
+        color: black;
+        padding: 18px 51px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+      }
+      .dropdown-content a:hover {
+        background-color: #333;
+        color: #f1f1ec;
+      }
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      main {
+        margin: 0px 20px;
+        height: 100%;
+      }
+      .page-container {
+        position: relative;
+        min-height: 100%;
+      }
+      .page-wrap {
+        padding-bottom: 66px;
+      }
+
+      footer {
+        position: absolute;
+        bottom: 0;
+        background: #111;
+        width: 100%;
+      }
+      .footer-content p {
+        text-align: center;
+        color: #cacdd2;
+      }
+
+      input[type="text"],
+      select,
+      textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        background-color: white;
+        border-radius: 4px;
+        resize: vertical;
+      }
+      textarea {
+        min-height: 100px;
+        max-height: 1000px;
+      }
+      input[type="text"]:focus {
+        background-color: #d2d0b6;
+      }
+      label {
+        padding: 12px 12px 12px 0;
+        display: inline-block;
+      }
+      input[type="submit"] {
+        font-size: 1.3em;
+        background-color: #3c00ff;
+        color: #f1f1ec;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        float: right;
+      }
+      input[type="submit"]:hover {
+        background-color: #434f8d;
+      }
+      .container {
+        border-radius: 5px;
+        background-color: #bbb;
+        padding: 20px 20px 60px;
+      }
+      .col-25 {
+        float: left;
+        width: 25%;
+        margin-top: 6px;
+      }
+      .col-75 {
+        float: left;
+        width: 75%;
+        margin-top: 6px;
+      }
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      @media screen and (max-width: 600px) {
+        .col-25,
+        .col-75,
+        input[type="submit"] {
+          width: 100%;
+          margin-top: 0;
+        }
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <title>O que achou do site? - Formulário - Armas Brancas</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="index.html">Página Inicial</a></li>
+        <li><a href="armachinesa.html">Chinesas</a></li>
+        <li><a href="armaromana.html">Romanas</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropbtn">Japonesas</a>
+          <div class="dropdown-content">
+            <a href="jitte.html">Jitte</a>
+            <a href="kusa.html">Kusarigama</a>
+            <a href="tachi.html">Tachi</a>
+          </div>
+        </li>
+        <li><a href="gallery.html">Galeria</a></li>
+        <li><a href="formulary.html">Formulário</a></li>
+      </ul>
+    </nav>
+    <div class="page-container">
+      <main>
+        <div class="page-wrap">
+          <h2>Formulário</h2>
+          <div class="container">
+            <form action="" method="GET">
+              <div class="row">
+                <div class="col-25">
+                  <label for="pnome">Nome</label>
+                </div>
+                <div class="col-75">
+                  <input
+                    type="text"
+                    name="fname"
+                    id="pnome"
+                    placeholder="Seu nome"
+                  />
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-25">
+                  <label for="snome">Sobrenome</label>
+                </div>
+                <div class="col-75">
+                  <input
+                    type="text"
+                    name="lname"
+                    id="snome"
+                    placeholder="Seu sobrenome"
+                  />
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-25">
+                  <label for="option">Avaliação</label>
+                </div>
+                <div class="col-75">
+                  <select id="option" name="option">
+                    <option value="Gostei muito">Gostei muito</option>
+                    <option value="Gostei">Gostei</option>
+                    <option value="Achei normal">Achei Normal</option>
+                    <option value="Ficou ruim">Ficou ruim</option>
+                    <option value="Minha avó faria melhor">
+                      Minha avó faria melhor
+                    </option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-25">
+                  <label for="coment">Comentários</label>
+                </div>
+                <div class="col-75">
+                  <textarea
+                    id="coment"
+                    name="coment"
+                    placeholder="Deixe seu feedback aqui"
+                    style="height: 200px"
+                  ></textarea>
+                </div>
+              </div>
+
+              <br />
+
+              <div class="row">
+                <input type="submit" value="Enviar" />
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <div class="footer-content">
+          <p>Pedro Ramos de Souza</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
