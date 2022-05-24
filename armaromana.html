@@ -6,7 +6,7 @@
       body {
         margin: 0;
         padding: 0;
-        font-family: sans-serif, arial;
+        font-family: arial, sans-serif;
         height: 100%;
         background-color: rgb(230, 228, 215);
       }
@@ -22,10 +22,10 @@
         display: inline-block;
         color: #f1f1ec;
         text-align: center;
-        padding: 28px 30px;
+        padding: 12px 14px;
         text-decoration: none;
-        font-size: 1.4em;
-        font-weight: 700;
+        font-size: 1.2em;
+        font-weight: 500;
       }
       li a:hover {
         background-color: #111;
@@ -46,7 +46,7 @@
       }
       .dropdown-content a {
         color: black;
-        padding: 18px 51px;
+        padding: 12px 14px;
         text-decoration: none;
         display: block;
         text-align: left;
@@ -60,13 +60,10 @@
       }
       main {
         margin: 0px 20px;
-        height: 100%;
       }
       .page-container {
-        margin: 0;
-        padding: 0;
         position: relative;
-        height: 100%;
+        min-height: 100%;
       }
       .content-wrap {
         padding-bottom: 66px;
@@ -88,7 +85,7 @@
         float: right;
         width: 47%;
       }
-      img {
+      .img-item {
         width: 350px;
         height: 100%;
         margin-left: auto;
@@ -96,7 +93,7 @@
         display: block;
         opacity: 0.5;
       }
-      img:hover {
+      .img-item:hover {
         opacity: 1;
       }
       p {
@@ -116,7 +113,7 @@
           display: block;
           margin-top: 120px;
         }
-        img {
+        .img-item {
           width: 350px;
           height: 100%;
           margin-left: auto;
@@ -135,6 +132,7 @@
         color: #cacdd2;
       }
     </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8" />
     <title>Armas Romanas -Armas Brancas</title>
   </head>
@@ -145,7 +143,7 @@
         <li><a href="armachinesa.html">Chinesas</a></li>
         <li><a href="armaromana.html">Romanas</a></li>
         <li class="dropdown">
-          <a href="armajaponesa.html" class="dropbtn">Japonesas</a>
+          <a href="#" class="dropbtn">Japonesas</a>
           <div class="dropdown-content">
             <a href="jitte.html">Jitte</a>
             <a href="kusa.html">Kusarigama</a>
@@ -176,7 +174,11 @@
             utilizadas pelo gladiador reciário, soldados e cidadães romanos, por
             ser pequena podia-se ser guardada e carregada com facilidade.
           </p>
-          <img src="./assets/pugio.png" alt="Púgio punhal romano" />
+          <img
+            src="./assets/pugio.png"
+            alt="Púgio punhal romano"
+            class="img-item"
+          />
         </div>
         <div class="container content-right">
           <h1>Pilo - Lança Romana</h1>
@@ -199,7 +201,11 @@
             consideráveis alterações ao longo do extenso período em que foi
             utilizada.
           </p>
-          <img src="./assets/pilo.png" alt="pilo lança romana" />
+          <img
+            src="./assets/pilo.png"
+            alt="pilo lança romana"
+            class="img-item"
+          />
         </div>
       </div>
       <footer>

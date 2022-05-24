@@ -1,217 +1,233 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
-<head>
-  <style>
-    html,
-    body {
-      margin: 0;
-      font-family: arial, sans-serif;
-      height: 100%;
-      background-color: rgb(230, 228, 215);
-    }
-
-    ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      background-color: #333;
-      overflow: hidden;
-    }
-
-    li a,
-    .dropbtn {
-      display: inline-block;
-      color: #f1f1ec;
-      text-align: center;
-      padding: 28px 30px;
-      text-decoration: none;
-      font-size: 1.4em;
-      font-weight: 700;
-    }
-
-    li a:hover {
-      background-color: #111;
-    }
-
-    li {
-      float: left;
-    }
-
-    .dropdown {
-      display: inline-block;
-    }
-
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: rgb(230, 228, 215);
-      min-width: 160px;
-      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-      z-index: 1;
-    }
-
-    .dropdown-content a {
-      color: black;
-      padding: 18px 51px;
-      text-decoration: none;
-      display: block;
-      text-align: left;
-    }
-
-    .dropdown-content a:hover {
-      background-color: #333;
-      color: #f1f1ec;
-    }
-
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
-
-    main {
-      height: 100%;
-    }
-
-    .page-container {
-      position: relative;
-      min-height: 100%;
-    }
-    .page-wrap {
-      padding: 20px 20px 66px;
-    }
-    .row {
-      display: flex;
-      padding: 0 4px;
-    }
-
-    .column {
-      display: flex;
-      flex-flow: column;
-      padding: 0 4px 38px;
-    }
-
-    .column img {
-      margin-top: 8px;
-      vertical-align: middle;
-      width: 100%;
-    }
-
-    @media screen and (max-width: 1100px) {
-      .column {
-            margin-right: auto;
-            margin-left: auto;
-            ;
+  <head>
+    <style>
+      html,
+      body {
+        margin: 0;
+        font-family: arial, sans-serif;
+        height: 100%;
+        background-color: #e6e4d7;
+        box-sizing: border-box;
       }
-      .row {
+
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        background-color: #333;
+        overflow: hidden;
+      }
+
+      li a,
+      .dropbtn {
         display: inline-block;
-        float: center;
+        color: #f1f1ec;
+        text-align: center;
+        padding: 12px 14px;
+        text-decoration: none;
+        font-size: 1.2em;
+        font-weight: 500;
       }
-    }
 
-    @media screen and (max-width: 600px) {
-      .column {
-        flex: 100%;
+      li a:hover {
+        background-color: #111;
       }
-    }
 
-    img {
-      opacity: 0.5;
-    }
+      li {
+        float: left;
+      }
 
-    img:hover {
-      opacity: 1;
-    }
-    .img {
-      border: 1px solid #bbb;
-      padding: 0.5em;
-      margin: 4px 2px 10px;
-    }
-    .desc {
-      font-size: 1.2em;
-      border-top: 1px solid #bbb;
-      padding: 4px;
-      background-color: #dcdfe0
-    }
-    footer {
-      position: absolute;
-      bottom: 0;
-      background: #111;
-      width: 100%;
-    }
+      .dropdown {
+        display: inline-block;
+      }
 
-    .footer-content p {
-      text-align: center;
-      color: #cacdd2;
-    }
-  </style>
-  <meta charset="UTF-8" />
-  <title>Galeria - Armas Brancas</title>
-</head>
-<body>
-  <nav>
-    <ul>
-      <li><a href="index.html">Página Inicial</a></li>
-      <li><a href="armachinesa.html">Chinesas</a></li>
-      <li><a href="armaromana.html">Romanas</a></li>
-      <li class="dropdown">
-        <a href="#" class="dropbtn">Japonesas</a>
-        <div class="dropdown-content">
-          <a href="jitte.html">Jitte</a>
-          <a href="kusa.html">Kusarigama</a>
-          <a href="tachi.html">Tachi</a>
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: rgb(230, 228, 215);
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+
+      .dropdown-content a {
+        color: black;
+        padding: 12px 14px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+      }
+
+      .dropdown-content a:hover {
+        background-color: #333;
+        color: #f1f1ec;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      main {
+        height: 100%;
+      }
+
+      .page-container {
+        position: relative;
+        min-height: 100%;
+      }
+      .page-wrap {
+        padding: 20px 20px 66px;
+      }
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        padding: 5px;
+        grid-gap: 10px;
+      }
+      .img-item img {
+        min-width: 100%;
+        height: 350px;
+        width: 350px;
+        object-fit: contain;
+      }
+      img .desc {
+        font-size: 1.3em;
+      }
+      .h-1 {
+        grid-row: span 1;
+      }
+      .h-2 {
+        grid-row: span 2;
+      }
+      .w-1 {
+        grid-column: span 1;
+      }
+      .w-2 {
+        grid-column: span 2;
+      }
+      .center {
+        align-self: center;
+      }
+      img {
+        opacity: 0.5;
+      }
+
+      img:hover {
+        opacity: 1;
+      }
+      @media screen and (max-width: 1024px) {
+        .gallery {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .h-2 {
+          grid-row: span 1;
+        }
+        .w-2 {
+          grid-column: span 1;
+        }
+      }
+      @media screen and (max-width: 735px) {
+        .gallery {
+          grid-template-columns: repeat(1, 1fr);
+        }
+        .img-item img {
+          min-width: 100%;
+          width: 300px;
+        }
+      }
+
+      footer {
+        position: absolute;
+        bottom: 0;
+        background: #111;
+        width: 100%;
+      }
+
+      .footer-content p {
+        text-align: center;
+        color: #cacdd2;
+      }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <title>Galeria - Armas Brancas</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="index.html">Página Inicial</a></li>
+        <li><a href="armachinesa.html">Chinesas</a></li>
+        <li><a href="armaromana.html">Romanas</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropbtn">Japonesas</a>
+          <div class="dropdown-content">
+            <a href="jitte.html">Jitte</a>
+            <a href="kusa.html">Kusarigama</a>
+            <a href="tachi.html">Tachi</a>
+          </div>
+        </li>
+        <li><a href="gallery.html">Galeria</a></li>
+        <li><a href="formulary.html">Formulário</a></li>
+      </ul>
+    </nav>
+    <div class="page-container">
+      <main>
+        <div class="page-wrap">
+          <div class="gallery">
+            <div class="img-item h-1 w-1 center">
+              <img src="./assets/bastaomadeira.png" alt="Sansetsukon" />
+              <span class="desc">
+                Bang - Bastão feito de madeira ou metal, utilizado como arma
+                básica.
+              </span>
+            </div>
+            <div class="img-item h-1 w-2 center">
+              <img src="./assets/bang.png" alt="Bang - Bastão Chinês" />
+              <span class="desc">
+                Sansetsukon - Um tipo de nunchaku de três bastões, preso por
+                corda ou corrente.
+              </span>
+            </div>
+            <div class="img-item h-2 w-1 center">
+              <img src="./assets/tachi.png" alt="Tachi" />
+              <span class="desc"
+                >Pilo - Lança comprida, arma romana contra cavalaria.
+              </span>
+            </div>
+            <div class="img-item h-1 w-1">
+              <img src="./assets/kusa.png" alt="Kusarigama" />
+              <span class="desc">
+                Púgio - Punhal romano, muito utilizado por status e ataques
+                curtos.
+              </span>
+            </div>
+            <div class="img-item h-1 w-1">
+              <img src="./assets/jitte.png" alt="Jitte" />
+              <span class="desc">
+                Jitte ou Jutte - Espada de defesa, similar ao Sai.
+              </span>
+            </div>
+            <div class="img-item h-1 w-1">
+              <img src="./assets/pugio.png" alt="Púgio" />
+              <span class="desc">Tachi - Espada japonesa longa e curvada.</span>
+            </div>
+            <div class="img-item h-1 w-1">
+              <img src="./assets/pilo.png" alt="Pilo" />
+              <span class="desc">
+                Kusarigama - Foice com corrente e peso na ponta.
+              </span>
+            </div>
+          </div>
         </div>
-      </li>
-      <li><a href="gallery.html">Galeria</a></li>
-      <li><a href="formulary.html">Formulário</a></li>
-    </ul>
-  </nav>
-  <div class="page-container">
-    <main>
-      <div class="page-wrap">
-      <div class="row">
-        <div class="column">
-          <div class="img">
-            <img src="./assets/bang.png" alt="bang bastão chinês" />
-            <div class="desc">Bang - Bastão feito de madeira ou metal, utilizado como arma básica.</div>
-          </div>
-          <div class="img">
-            <img src="./assets/bastaomadeira.png" alt="Sansetsukon" />
-            <div class="desc">Sansetsukon - Um tipo de nunchaku de três bastões, preso por corda ou corrente.</div>
-          </div>
+      </main>
+      <footer>
+        <div class="footer-content">
+          <p>Pedro Ramos de Souza</p>
         </div>
-        <div class="column">
-          <div class="img">
-            <img src="./assets/pilo.png" alt="pilo lança romana" />
-            <div class="desc">Pilo - Lança comprida, arma romana contra cavalaria.</div>
-          </div>
-          <div class="img">
-            <img src="./assets/pugio.png" alt="púgio punhal romano" />
-            <div class="desc">Púgio - Punhal romano, muito utilizado por status e ataques curtos.</div>
-          </div>
-        </div>
-        <div class="column">
-          <div class="img">
-            <img src="./assets/jitte.png" alt="jitte espada japonesa" />
-            <div class="desc">Jitte ou Jutte - Espada de defesa, similar ao Sai.</div>
-          </div>
-          <div class="img">
-            <img src="./assets/tachi.png" alt="tachi espada japonesa" />
-            <div class="desc">Tachi - Espada japonesa longa e curvada.</div>
-          </div>
-        </div>
-        <div class="column">
-          <div class="img">
-            <img src="./assets/kusa.png" alt="Kusarigama foice japonesa" />
-            <div class="desc">Kusarigama - Foice com corrente e peso na ponta.</div>
-          </div>
-        </div>
-      </div>
-    </main>
-    <footer>
-      <div class="footer-content">
-        <p>Pedro Ramos de Souza</p>
-      </div>
-    </footer>
-  </div>
-</body>
+      </footer>
+    </div>
+  </body>
 </html>
